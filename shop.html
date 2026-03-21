@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LyncLogic — Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: { electric: { DEFAULT: '#38bdf8', glow: '#0ea5e9' } },
+          boxShadow: {
+            'glow': '0 0 40px -10px rgba(56, 189, 248, 0.45)',
+            'glow-sm': '0 0 24px -8px rgba(56, 189, 248, 0.35)',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .glass-nav {
+      background: rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+    }
+    @keyframes pulse-soft {
+      0%, 100% { opacity: 0.35; }
+      50% { opacity: 0.65; }
+    }
+    .ghost-shimmer {
+      animation: pulse-soft 2.5s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100 font-sans antialiased selection:bg-electric/30 selection:text-white">
+  <div class="pointer-events-none fixed inset-0 overflow-hidden">
+    <div class="absolute -top-20 left-1/2 h-96 w-[120%] -translate-x-1/2 rounded-full bg-electric/8 blur-[100px]"></div>
+  </div>
+
+  <header class="fixed top-0 left-0 right-0 z-50 px-4 pt-4 sm:px-6">
+    <nav class="glass-nav mx-auto flex max-w-6xl items-center justify-between rounded-2xl px-4 py-3 sm:px-6" aria-label="Primary">
+      <a href="index.html" class="group flex items-center gap-2 font-semibold tracking-tight text-white transition hover:text-electric">
+        <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-electric to-blue-600 text-slate-950 shadow-glow-sm transition group-hover:scale-105">
+          <i class="fa-solid fa-bolt text-sm" aria-hidden="true"></i>
+        </span>
+        <span>LyncLogic</span>
+      </a>
+      <button type="button" id="nav-toggle" class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-600/50 text-slate-200 transition hover:border-electric/50 hover:text-electric md:hidden" aria-expanded="false" aria-controls="nav-menu">
+        <i class="fa-solid fa-bars text-lg" aria-hidden="true"></i>
+        <span class="sr-only">Open menu</span>
+      </button>
+      <div id="nav-menu" class="absolute left-4 right-4 top-full mt-2 hidden flex flex-col gap-1 rounded-xl border border-slate-700/50 bg-slate-900/95 p-3 shadow-xl backdrop-blur-md md:static md:mt-0 md:flex md:flex-row md:border-0 md:bg-transparent md:p-0 md:shadow-none">
+        <a href="index.html" class="rounded-lg px-4 py-2.5 text-sm font-medium text-slate-300 transition hover:bg-slate-800/80 hover:text-white md:hover:bg-transparent">Home</a>
+        <a href="projects.html" class="rounded-lg px-4 py-2.5 text-sm font-medium text-slate-300 transition hover:bg-slate-800/80 hover:text-white md:hover:bg-transparent">Projects</a>
+        <a href="shop.html" class="rounded-lg px-4 py-2.5 text-sm font-medium text-electric bg-electric/10 md:bg-transparent" aria-current="page">Shop</a>
+        <a href="about.html" class="rounded-lg px-4 py-2.5 text-sm font-medium text-slate-300 transition hover:bg-slate-800/80 hover:text-white md:hover:bg-transparent">About</a>
+        <a href="contact.html" class="rounded-lg px-4 py-2.5 text-sm font-medium text-slate-300 transition hover:bg-slate-800/80 hover:text-white md:hover:bg-transparent">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="relative pt-28 pb-20">
+    <section class="mx-auto max-w-6xl px-4 text-center sm:px-6">
+      <span class="inline-flex items-center gap-2 rounded-full border border-electric/30 bg-electric/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-electric">
+        <i class="fa-solid fa-hourglass-half" aria-hidden="true"></i> Coming soon
+      </span>
+      <h1 class="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl">The LyncLogic shop</h1>
+      <p class="mx-auto mt-4 max-w-2xl text-lg text-slate-400">Merch, digital goods, and app bundles are on the way. Until checkout goes live, here is a preview of what the shelf will feel like—ghost cards, real ambition.</p>
+    </section>
+
+    <section class="mx-auto mt-16 max-w-6xl px-4 sm:px-6">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Ghost card 1 -->
+        <article class="group relative overflow-hidden rounded-2xl border border-dashed border-slate-600/50 bg-slate-900/25 p-1 transition duration-300 hover:border-electric/40 hover:shadow-glow-sm">
+          <div class="relative h-48 overflow-hidden rounded-xl bg-slate-800/50">
+            <div class="ghost-shimmer absolute inset-0 bg-gradient-to-br from-slate-700/40 via-slate-800/20 to-electric/10"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <i class="fa-solid fa-shirt text-4xl text-slate-600 transition group-hover:scale-110 group-hover:text-electric/50" aria-hidden="true"></i>
+            </div>
+            <span class="absolute right-3 top-3 rounded-md bg-slate-950/80 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-slate-500">Placeholder</span>
+          </div>
+          <div class="p-5">
+            <h2 class="font-semibold text-slate-500">Core collection tee</h2>
+            <p class="mt-2 text-sm text-slate-600">Heavyweight cotton · electric blue print · unisex fit</p>
+            <div class="mt-4 h-10 w-full rounded-xl border border-slate-700/60 bg-slate-800/30"></div>
+          </div>
+        </article>
+        <!-- Ghost card 2 -->
+        <article class="group relative overflow-hidden rounded-2xl border border-dashed border-slate-600/50 bg-slate-900/25 p-1 transition duration-300 hover:border-electric/40 hover:shadow-glow-sm">
+          <div class="relative h-48 overflow-hidden rounded-xl bg-slate-800/50">
+            <div class="ghost-shimmer absolute inset-0 bg-gradient-to-br from-slate-700/40 via-slate-800/20 to-blue-500/10" style="animation-delay: 0.3s"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <i class="fa-solid fa-mug-hot text-4xl text-slate-600 transition group-hover:scale-110 group-hover:text-electric/50" aria-hidden="true"></i>
+            </div>
+            <span class="absolute right-3 top-3 rounded-md bg-slate-950/80 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-slate-500">Placeholder</span>
+          </div>
+          <div class="p-5">
+            <h2 class="font-semibold text-slate-500">Signal mug</h2>
+            <p class="mt-2 text-sm text-slate-600">Matte ceramic · midnight glaze · studio badge</p>
+            <div class="mt-4 h-10 w-full rounded-xl border border-slate-700/60 bg-slate-800/30"></div>
+          </div>
+        </article>
+        <!-- Ghost card 3 -->
+        <article class="group relative overflow-hidden rounded-2xl border border-dashed border-slate-600/50 bg-slate-900/25 p-1 transition duration-300 hover:border-electric/40 hover:shadow-glow-sm sm:col-span-2 lg:col-span-1">
+          <div class="relative h-48 overflow-hidden rounded-xl bg-slate-800/50">
+            <div class="ghost-shimmer absolute inset-0 bg-gradient-to-br from-slate-700/40 via-slate-800/20 to-violet-500/10" style="animation-delay: 0.6s"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <i class="fa-solid fa-box-open text-4xl text-slate-600 transition group-hover:scale-110 group-hover:text-electric/50" aria-hidden="true"></i>
+            </div>
+            <span class="absolute right-3 top-3 rounded-md bg-slate-950/80 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-slate-500">App bundle</span>
+          </div>
+          <div class="p-5">
+            <h2 class="font-semibold text-slate-500">Nexus + Loopit bundle</h2>
+            <p class="mt-2 text-sm text-slate-600">Lifetime access placeholder · perks TBD</p>
+            <div class="mt-4 h-10 w-full rounded-xl border border-slate-700/60 bg-slate-800/30"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="mx-auto mt-16 max-w-2xl px-4 text-center sm:px-6">
+      <p class="text-sm text-slate-500">Want first access when the store opens?</p>
+      <a href="contact.html" class="mt-4 inline-flex items-center justify-center gap-2 rounded-xl bg-electric px-8 py-3 font-medium text-slate-950 shadow-glow-sm transition-all duration-300 ease-out hover:scale-[1.03] hover:shadow-glow hover:brightness-110 active:scale-[0.98]">
+        Join the waitlist <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i>
+      </a>
+    </section>
+  </main>
+
+  <footer class="relative border-t border-slate-800/80 bg-slate-950/80 py-10">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-4 sm:flex-row sm:px-6">
+      <p class="text-sm text-slate-500">© <span id="y"></span> LyncLogic. All rights reserved.</p>
+      <div class="flex gap-4 text-slate-400">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="transition hover:text-electric hover:scale-110" aria-label="GitHub"><i class="fa-brands fa-github text-xl" aria-hidden="true"></i></a>
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="transition hover:text-electric hover:scale-110" aria-label="X"><i class="fa-brands fa-x-twitter text-xl" aria-hidden="true"></i></a>
+        <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="transition hover:text-electric hover:scale-110" aria-label="Discord"><i class="fa-brands fa-discord text-xl" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var y = document.getElementById('y');
+      if (y) y.textContent = new Date().getFullYear();
+      var toggle = document.getElementById('nav-toggle');
+      var menu = document.getElementById('nav-menu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', function () {
+        menu.classList.toggle('hidden');
+        var expanded = !menu.classList.contains('hidden');
+        toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        var icon = toggle.querySelector('i');
+        if (icon) icon.className = expanded ? 'fa-solid fa-xmark text-lg' : 'fa-solid fa-bars text-lg';
+      });
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (window.matchMedia('(max-width: 767px)').matches) {
+            menu.classList.add('hidden');
+            toggle.setAttribute('aria-expanded', 'false');
+            var ic = toggle.querySelector('i');
+            if (ic) ic.className = 'fa-solid fa-bars text-lg';
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

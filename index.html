@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LyncLogic — Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            electric: { DEFAULT: '#38bdf8', glow: '#0ea5e9' },
+          },
+          boxShadow: {
+            'glow': '0 0 40px -10px rgba(56, 189, 248, 0.45)',
+            'glow-sm': '0 0 24px -8px rgba(56, 189, 248, 0.35)',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .glass-nav {
+      background: rgba(15, 23, 42, 0.55);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100 font-sans antialiased selection:bg-electric/30 selection:text-white">
+  <!-- Ambient background -->
+  <div class="pointer-events-none fixed inset-0 overflow-hidden">
+    <div class="absolute -top-40 -right-40 h-96 w-96 rounded-full bg-electric/15 blur-[100px]"></div>
+    <div class="absolute top-1/2 -left-32 h-80 w-80 rounded-full bg-blue-600/10 blur-[90px]"></div>
+    <div class="absolute bottom-0 right-1/4 h-64 w-64 rounded-full bg-sky-500/10 blur-[80px]"></div>
+  </div>
+
+  <header class="fixed top-0 left-0 right-0 z-50 px-4 pt-4 sm:px-6">
+    <nav class="glass-nav mx-auto flex max-w-6xl items-center justify-between rounded-2xl px-4 py-3 sm:px-6" aria-label="Primary">
+      <a href="index.html" class="group flex items-center gap-2 font-semibold tracking-tight text-white transition hover:text-electric">
+        <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-electric to-blue-600 text-slate-950 shadow-glow-sm transition group-hover:scale-105">
+          <i class="fa-solid fa-bolt text-sm" aria-hidden="true"></i>
+        </span>
+        <span>LyncLogic</span>
+      </a>
+
+      <button type="button" id="nav-toggle" class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-600/50 text-slate-200 transition hover:border-electric/50 hover:text-electric md:hidden" aria-expanded="false" aria-controls="nav-menu">
+        <i class="fa-solid fa-bars text-lg" aria-hidden="true"></i>
+        <span class="sr-only">Open menu</span>
+      </button>
+
+      <div id="nav-menu" class="absolute left-4 right-4 top-full mt-2 hidden flex flex-col gap-1 rounded-xl border border-slate-700/50 bg-slate-900/95 p-3 shadow-xl backdrop-blur-md md:static md:mt-0 md:flex md:flex-row md:border-0 md:bg-transparent md:p-0 md:shadow-none">
+        <a href="index.html" class="rounded-lg px-4 py-2.5 text-sm font-medium text-electric bg-electric/10 md:bg-transparent" aria-current="page">Home</a>
+        <a href="projects.html" class="rounded-lg px-4 py-2.5 text-sm font-medium text-slate-300 transition hover:bg-slate-800/80 hover:text-white md:hover:bg-transparent">Projects</a>
+        <a href="shop.html" class="rounded-lg px-4 py-2.5 text-sm font-medium text-slate-300 transition hover:bg-slate-800/80 hover:text-white md:hover:bg-transparent">Shop</a>
+        <a href="about.html" class="rounded-lg px-4 py-2.5 text-sm font-medium text-slate-300 transition hover:bg-slate-800/80 hover:text-white md:hover:bg-transparent">About</a>
+        <a href="contact.html" class="rounded-lg px-4 py-2.5 text-sm font-medium text-slate-300 transition hover:bg-slate-800/80 hover:text-white md:hover:bg-transparent">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="relative pt-28 pb-20">
+    <!-- Hero -->
+    <section class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+        <div>
+          <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-slate-700/80 bg-slate-900/50 px-3 py-1 text-xs font-medium uppercase tracking-wider text-slate-400">
+            <span class="h-1.5 w-1.5 rounded-full bg-electric shadow-glow-sm"></span>
+            Developer · Tech · Digital products
+          </p>
+          <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            LyncLogic: <span class="bg-gradient-to-r from-electric to-blue-400 bg-clip-text text-transparent">Building the Digital Future.</span>
+          </h1>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-400">
+            We craft focused apps and tools with clarity, performance, and a developer-first mindset—from life hubs to creative project loops.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="projects.html" class="inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 font-medium text-slate-950 bg-electric shadow-glow-sm transition-all duration-300 ease-out hover:scale-[1.03] hover:shadow-glow hover:brightness-110 active:scale-[0.98]"><i class="fa-solid fa-rocket" aria-hidden="true"></i> View projects</a>
+            <a href="contact.html" class="inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 font-medium text-slate-100 border border-slate-600/60 bg-slate-800/40 transition-all duration-300 ease-out hover:border-electric/60 hover:text-white hover:bg-slate-800/70 hover:scale-[1.03] hover:shadow-glow-sm active:scale-[0.98]"><i class="fa-regular fa-envelope" aria-hidden="true"></i> Get in touch</a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-electric/20 via-transparent to-blue-600/20 blur-2xl"></div>
+          <div class="relative overflow-hidden rounded-2xl border border-slate-700/60 bg-slate-900/60 p-6 shadow-glow">
+            <div class="flex items-center justify-between border-b border-slate-700/50 pb-4">
+              <div class="flex gap-2">
+                <span class="h-3 w-3 rounded-full bg-red-500/80"></span>
+                <span class="h-3 w-3 rounded-full bg-amber-400/80"></span>
+                <span class="h-3 w-3 rounded-full bg-emerald-500/80"></span>
+              </div>
+              <span class="text-xs text-slate-500">lynclogic.dev</span>
+            </div>
+            <pre class="mt-4 overflow-x-auto text-sm leading-relaxed text-slate-400"><code><span class="text-purple-400">const</span> <span class="text-sky-300">future</span> = <span class="text-amber-300">await</span> <span class="text-emerald-400">build</span>({
+  <span class="text-slate-500">vision:</span> <span class="text-emerald-300">'digital'</span>,
+  <span class="text-slate-500">craft:</span> <span class="text-emerald-300">'precise'</span>,
+});</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Apps -->
+    <section id="featured" class="mx-auto mt-24 max-w-6xl px-4 sm:px-6">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h2 class="text-2xl font-bold text-white sm:text-3xl">Featured apps</h2>
+          <p class="mt-2 max-w-lg text-slate-400">Polished experiences built for real workflows—organized, fast, and ready to scale.</p>
+        </div>
+        <a href="projects.html" class="inline-flex items-center justify-center gap-2 self-start rounded-xl border border-slate-600/60 bg-slate-800/40 px-4 py-2 text-sm font-medium text-slate-100 transition-all duration-300 ease-out hover:border-electric/60 hover:bg-slate-800/70 hover:text-white hover:scale-[1.03] hover:shadow-glow-sm active:scale-[0.98]">See all <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i></a>
+      </div>
+
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="group flex flex-col overflow-hidden rounded-2xl border border-slate-700/50 bg-slate-900/40 transition duration-300 hover:border-electric/40 hover:shadow-glow">
+          <div class="relative h-40 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1557683316-973673baf926?w=800&q=80" alt="" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 to-transparent"></div>
+            <span class="absolute bottom-3 left-3 rounded-md bg-electric/20 px-2 py-0.5 text-xs font-medium text-electric">Life Hub</span>
+          </div>
+          <div class="flex flex-1 flex-col p-5">
+            <h3 class="font-semibold text-white">Ethereal Nexus: Life Hub</h3>
+            <p class="mt-2 flex-1 text-sm text-slate-400">Your calm command center for habits, goals, and daily flow.</p>
+            <a href="https://example.com/ethereal-nexus" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-electric py-2 text-sm font-medium text-slate-950 shadow-glow-sm transition-all duration-300 ease-out hover:scale-[1.03] hover:shadow-glow hover:brightness-110 active:scale-[0.98]">Open app <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <article class="group flex flex-col overflow-hidden rounded-2xl border border-slate-700/50 bg-slate-900/40 transition duration-300 hover:border-electric/40 hover:shadow-glow">
+          <div class="relative h-40 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80" alt="" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 to-transparent"></div>
+            <span class="absolute bottom-3 left-3 rounded-md bg-blue-500/20 px-2 py-0.5 text-xs font-medium text-blue-300">Projects</span>
+          </div>
+          <div class="flex flex-1 flex-col p-5">
+            <h3 class="font-semibold text-white">Loopit Projects</h3>
+            <p class="mt-2 flex-1 text-sm text-slate-400">Iterate faster with loops that keep ideas, tasks, and shipped work aligned.</p>
+            <a href="https://example.com/loopit" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-electric py-2 text-sm font-medium text-slate-950 shadow-glow-sm transition-all duration-300 ease-out hover:scale-[1.03] hover:shadow-glow hover:brightness-110 active:scale-[0.98]">Open app <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <article class="group flex flex-col overflow-hidden rounded-2xl border border-slate-700/50 bg-slate-900/40 transition duration-300 hover:border-electric/40 hover:shadow-glow">
+          <div class="relative h-40 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&q=80" alt="" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 to-transparent"></div>
+            <span class="absolute bottom-3 left-3 rounded-md bg-violet-500/20 px-2 py-0.5 text-xs font-medium text-violet-300">DevTools</span>
+          </div>
+          <div class="flex flex-1 flex-col p-5">
+            <h3 class="font-semibold text-white">Pulse CLI</h3>
+            <p class="mt-2 flex-1 text-sm text-slate-400">Lightweight utilities for shipping, logging, and local workflows.</p>
+            <a href="https://example.com/pulse-cli" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-electric py-2 text-sm font-medium text-slate-950 shadow-glow-sm transition-all duration-300 ease-out hover:scale-[1.03] hover:shadow-glow hover:brightness-110 active:scale-[0.98]">Open app <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+        <article class="group flex flex-col overflow-hidden rounded-2xl border border-slate-700/50 bg-slate-900/40 transition duration-300 hover:border-electric/40 hover:shadow-glow">
+          <div class="relative h-40 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=80" alt="" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 to-transparent"></div>
+            <span class="absolute bottom-3 left-3 rounded-md bg-cyan-500/20 px-2 py-0.5 text-xs font-medium text-cyan-300">Labs</span>
+          </div>
+          <div class="flex flex-1 flex-col p-5">
+            <h3 class="font-semibold text-white">Signal Grid</h3>
+            <p class="mt-2 flex-1 text-sm text-slate-400">Experimental dashboards for monitoring what matters—without the noise.</p>
+            <a href="https://example.com/signal-grid" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-electric py-2 text-sm font-medium text-slate-950 shadow-glow-sm transition-all duration-300 ease-out hover:scale-[1.03] hover:shadow-glow hover:brightness-110 active:scale-[0.98]">Open app <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- YouTube placeholder -->
+    <section class="mx-auto mt-24 max-w-6xl px-4 sm:px-6">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h2 class="text-2xl font-bold text-white sm:text-3xl">Latest from the channel</h2>
+          <p class="mt-2 text-slate-400">Drop in a real embed when you are ready—this block is sized and styled for YouTube.</p>
+        </div>
+      </div>
+      <div class="relative mt-8 overflow-hidden rounded-2xl border-2 border-slate-600/50 bg-gradient-to-br from-slate-900 to-slate-950 p-1 shadow-glow transition hover:border-electric/50">
+        <div class="rounded-xl bg-slate-950/80 p-2 sm:p-3">
+          <div class="relative aspect-video overflow-hidden rounded-lg border border-slate-700/60 bg-slate-900">
+            <div class="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-slate-900/95">
+              <div class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-electric/60 bg-electric/10 text-electric shadow-glow-sm transition hover:scale-110">
+                <i class="fa-brands fa-youtube text-3xl" aria-hidden="true"></i>
+              </div>
+              <p class="text-center text-sm text-slate-400">YouTube video placeholder</p>
+              <p class="text-center text-xs text-slate-500 max-w-md px-4">Replace this block with an iframe: <code class="rounded bg-slate-800 px-1.5 py-0.5 text-electric/90">&lt;iframe src="https://www.youtube.com/embed/VIDEO_ID" ...&gt;</code></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="relative border-t border-slate-800/80 bg-slate-950/80 py-10">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-4 sm:flex-row sm:px-6">
+      <p class="text-sm text-slate-500">© <span id="y"></span> LyncLogic. All rights reserved.</p>
+      <div class="flex gap-4 text-slate-400">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="transition hover:text-electric hover:scale-110" aria-label="GitHub"><i class="fa-brands fa-github text-xl" aria-hidden="true"></i></a>
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="transition hover:text-electric hover:scale-110" aria-label="X"><i class="fa-brands fa-x-twitter text-xl" aria-hidden="true"></i></a>
+        <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="transition hover:text-electric hover:scale-110" aria-label="Discord"><i class="fa-brands fa-discord text-xl" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var y = document.getElementById('y');
+      if (y) y.textContent = new Date().getFullYear();
+      var toggle = document.getElementById('nav-toggle');
+      var menu = document.getElementById('nav-menu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', function () {
+        menu.classList.toggle('hidden');
+        var expanded = !menu.classList.contains('hidden');
+        toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        var icon = toggle.querySelector('i');
+        if (icon) {
+          icon.className = expanded ? 'fa-solid fa-xmark text-lg' : 'fa-solid fa-bars text-lg';
+        }
+      });
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (window.matchMedia('(max-width: 767px)').matches) {
+            menu.classList.add('hidden');
+            toggle.setAttribute('aria-expanded', 'false');
+            var ic = toggle.querySelector('i');
+            if (ic) ic.className = 'fa-solid fa-bars text-lg';
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

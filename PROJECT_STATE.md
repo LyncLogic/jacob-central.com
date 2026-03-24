@@ -20,3 +20,7 @@
 
 ## Environment
 - Static site (HTML); POC-style repo. No VRAM constraints noted.
+
+## Ship / git (2026-03-24)
+- Local commit `75e6f1f` on `main`: domain README fix, Ethereal Nexus URL on index + projects, `PROJECT_STATE.md`, `.cursor/rules/cross-page-consistency.mdc`.
+- `git push origin main` did not complete from the agent environment (remote still at prior commit until push succeeds). User should run push where GitHub auth works.

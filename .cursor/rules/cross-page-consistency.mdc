@@ -1,0 +1,16 @@
+---
+description: Keep repeated URLs and labels consistent across all HTML pages
+alwaysApply: true
+---
+
+# Cross-page consistency (static site)
+
+This repo is a multi-page static site (`index.html`, `projects.html`, `about.html`, `contact.html`, `shop.html`, etc.). The same real-world link or repeated label must match everywhere it appears.
+
+When you add or change any of the following, **search the whole project** (e.g. ripgrep for the old URL, path segment, or anchor text) and **update every occurrence** in HTML (and README if it documents the link), not only the file the user named.
+
+- External `href` URLs (project demos, social profiles, stores).
+- Placeholder domains like `example.com` when replacing with production URLs.
+- Repeated product/project names or CTAs that should stay identical across home vs projects sections.
+
+**Workflow:** after editing, run a repo-wide search for the old string and for parallel pages (`index.html` vs `projects.html`) so home and project detail links stay in sync.

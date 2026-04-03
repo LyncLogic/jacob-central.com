@@ -5,13 +5,13 @@
 - Updated `README.md` title line from `jacob-central.com` to `jake-central.com`.
 - Replaced Ethereal Nexus placeholder URL on `index.html` with `https://ethereal-nexus-life-hub.base44.app/`.
 - Synced the same Ethereal Nexus URL on `projects.html`; added `.cursor/rules/cross-page-consistency.mdc` so future link/label edits are applied repo-wide.
-- **2026-04-03:** Confirmed Ethereal Nexus app links are not `https://example.com/ethereal-nexus` (that was the pre-`75e6f1f` placeholder in `44cf203`); `index.html` and `projects.html` both use `https://ethereal-nexus-life-hub.base44.app/`. Staged `PROJECT_STATE.md` and attempted `git push origin main`.
+- **2026-04-03:** A failed `git pull --rebase` (permission error on `.cursor/rules`) left the working tree inconsistent; re-applied Ethereal Nexus `href` on `index.html` and `projects.html` to `https://ethereal-nexus-life-hub.base44.app/`. Restored `PROJECT_STATE.md` and cross-page rule content; used `git merge origin/main` (not rebase) to integrate remote `CNAME` and avoid the same failure mode.
 
 ## Petty progress
 - N/A
 
 ## Validation & errors
-- None (no build/test run for static HTML).
+- `git pull --rebase` failed: `cannot stat '.cursor/rules': Permission denied` (UNC/network path). Prefer `git merge origin/main` for this repo.
 
 ## Strategic pivot
 - None.
@@ -24,4 +24,4 @@
 
 ## Ship / git
 - **2026-03-24:** Local commit `75e6f1f` on `main`: domain README fix, Ethereal Nexus URL on index + projects (`https://example.com/ethereal-nexus` → `https://ethereal-nexus-life-hub.base44.app/`), `PROJECT_STATE.md`, `.cursor/rules/cross-page-consistency.mdc`.
-- **2026-04-03:** Commit PROJECT_STATE refresh after Ethereal link verification; push `main` to origin (see terminal).
+- **2026-04-03:** Re-applied Ethereal link after rebase incident; merge `origin/main` and push when clean.

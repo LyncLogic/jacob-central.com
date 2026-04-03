@@ -6,6 +6,7 @@
 - Replaced Ethereal Nexus placeholder URL on `index.html` with `https://ethereal-nexus-life-hub.base44.app/`.
 - Synced the same Ethereal Nexus URL on `projects.html`; added `.cursor/rules/cross-page-consistency.mdc` so future link/label edits are applied repo-wide.
 - **2026-04-03:** A failed `git pull --rebase` (permission error on `.cursor/rules`) left the working tree inconsistent; re-applied Ethereal Nexus `href` on `index.html` and `projects.html` to `https://ethereal-nexus-life-hub.base44.app/`. Restored `PROJECT_STATE.md` and cross-page rule content; used `git merge origin/main` (not rebase) to integrate remote `CNAME` and avoid the same failure mode.
+- **2026-04-03 (cont.):** `git push origin main` succeeded (`cacc10f..af894fb`). If the local copy still shows `deleted: .cursor/rules/cross-page-consistency.mdc`, fix UNC/SMB permissions on `.cursor/rules` and run `git restore .cursor/rules/cross-page-consistency.mdc`—the file remains in `main` on GitHub.
 
 ## Petty progress
 - N/A
@@ -24,4 +25,4 @@
 
 ## Ship / git
 - **2026-03-24:** Local commit `75e6f1f` on `main`: domain README fix, Ethereal Nexus URL on index + projects (`https://example.com/ethereal-nexus` → `https://ethereal-nexus-life-hub.base44.app/`), `PROJECT_STATE.md`, `.cursor/rules/cross-page-consistency.mdc`.
-- **2026-04-03:** Re-applied Ethereal link after rebase incident; merge `origin/main` and push when clean.
+- **2026-04-03:** Pushed `main` including Ethereal Nexus base44 URLs, `PROJECT_STATE`, merge commit with `CNAME` from GitHub Pages setup.
